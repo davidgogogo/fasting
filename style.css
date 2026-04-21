@@ -1,13 +1,8 @@
 body{
 margin:0;
-font-family:Arial;
-background:#f2f4f7;
-color:#222;
-}
-
-body.dark{
-background:#121212;
-color:#fff;
+font-family:-apple-system,BlinkMacSystemFont;
+background:#f2f2f7;
+color:#111;
 }
 
 .app{
@@ -16,88 +11,57 @@ margin:auto;
 padding:15px;
 }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
-
 .card{
 background:white;
+border-radius:22px;
 padding:18px;
-border-radius:18px;
 margin-top:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
 }
 
-body.dark .card{
-background:#1e1e1e;
-}
-
-.center{
-text-align:center;
-}
+.center{text-align:center;}
 
 button{
 width:100%;
-padding:12px;
+padding:14px;
 margin-top:10px;
 border:none;
-border-radius:12px;
-background:#007bff;
+border-radius:14px;
+background:#007aff;
 color:white;
 font-size:16px;
 }
 
 input{
 width:100%;
-padding:12px;
-border-radius:10px;
+padding:14px;
+border-radius:14px;
 border:1px solid #ccc;
 box-sizing:border-box;
 }
 
-.ring{
-position:relative;
-width:220px;
-margin:auto;
+#clock{
+font-size:52px;
+font-weight:700;
 }
 
-svg{
-transform:rotate(-90deg);
+#status{
+font-size:20px;
+margin-top:5px;
 }
 
-circle{
-fill:none;
-stroke-width:12;
-}
-
-.bg{
-stroke:#ddd;
-}
-
-.progress{
-stroke:#00c853;
-stroke-linecap:round;
-stroke-dasharray:597;
-stroke-dashoffset:597;
-transition:.5s;
-}
-
-.inside{
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-text-align:center;
-}
-
-#hours{
-font-size:34px;
-font-weight:bold;
-}
-
-#fatburn{
-font-weight:bold;
+#tip{
 color:#ff6600;
+font-weight:bold;
+margin-top:10px;
+}
+
+.fadein{
+animation:fade .5s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(10px);}
+to{opacity:1;transform:none;}
 }

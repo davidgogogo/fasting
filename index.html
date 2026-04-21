@@ -3,48 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Fasting App</title>
+<meta name="theme-color" content="#111111">
+<link rel="manifest" href="manifest.json">
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<title>Fasting Pro</title>
 </head>
 <body>
 
-<div class="app">
+<div class="app fadein">
 
 <header>
-<h1>⏳ 間歇性斷食</h1>
-<button onclick="toggleDark()">🌙</button>
+<h1>⏳ Fasting Pro</h1>
 </header>
 
 <section class="card center">
-
-<div class="ring">
-<svg width="220" height="220">
-<circle cx="110" cy="110" r="95" class="bg"></circle>
-<circle cx="110" cy="110" r="95" class="progress" id="progress"></circle>
-</svg>
-<div class="inside">
-<div id="hours">0h</div>
+<div id="clock">0.0h</div>
 <div id="status">尚未開始</div>
-</div>
-</div>
-
-<p id="fatburn"></p>
+<div id="tip"></div>
 
 <button onclick="startFast()">開始禁食</button>
-<button onclick="endFast()">結束禁食</button>
-
+<button onclick="eatNow()">進食</button>
+<button onclick="hunger()">饑餓感來襲</button>
 </section>
 
 <section class="card">
-<h2>⚖️ 體重紀錄</h2>
-<input type="number" id="weightInput" placeholder="輸入公斤">
-<button onclick="saveWeight()">儲存體重</button>
+<h2>⚖️ 體重</h2>
+<input id="weight" type="number" placeholder="公斤">
+<button onclick="saveWeight()">儲存</button>
+
+<div id="bmi"></div>
+<div id="fat"></div>
 </section>
 
 <section class="card">
-<h2>📈 最近7天</h2>
-<canvas id="chart"></canvas>
+<h2>📅 歷史紀錄</h2>
+<div id="history"></div>
 </section>
 
 </div>
