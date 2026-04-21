@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fasting App</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="app">
+
+<header>
+<h1>⏳ 間歇性斷食</h1>
+<button onclick="toggleDark()">🌙</button>
+</header>
+
+<section class="card center">
+
+<div class="ring">
+<svg width="220" height="220">
+<circle cx="110" cy="110" r="95" class="bg"></circle>
+<circle cx="110" cy="110" r="95" class="progress" id="progress"></circle>
+</svg>
+<div class="inside">
+<div id="hours">0h</div>
+<div id="status">尚未開始</div>
+</div>
+</div>
+
+<p id="fatburn"></p>
+
+<button onclick="startFast()">開始禁食</button>
+<button onclick="endFast()">結束禁食</button>
+
+</section>
+
+<section class="card">
+<h2>⚖️ 體重紀錄</h2>
+<input type="number" id="weightInput" placeholder="輸入公斤">
+<button onclick="saveWeight()">儲存體重</button>
+</section>
+
+<section class="card">
+<h2>📈 最近7天</h2>
+<canvas id="chart"></canvas>
+</section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
